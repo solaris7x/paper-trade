@@ -14,7 +14,7 @@ const App = () => {
   const [mongoData, setMongoData] = useState<mongoDataProps[]>()
 
   useEffect(() => {
-    fetch("https://aliz-express.herokuapp.com/reliance")
+    fetch("https://paper-express.herokuapp.com/reliance")
       .then((res) => res.json())
       .then((data) => {
         setMongoData(data)
