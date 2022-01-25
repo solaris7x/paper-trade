@@ -15,8 +15,8 @@ const Positions = (props: PositionsProps) => {
   const pnl = calpnl(positions, props.currentPrice)
 
   return (
-    <div className="mt-4 flex w-full">
-      <div className="w-1/2 bg-gray-700 rounded p-4">
+    <div className="mt-4 md:flex w-full">
+      <div className="md:w-1/2 bg-gray-700 rounded p-4">
         <div className="font-bold pb-2 border-b-2 border-gray-400">
           Stratergy Positions
         </div>

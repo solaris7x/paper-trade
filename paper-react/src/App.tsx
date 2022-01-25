@@ -14,7 +14,10 @@ const App = () => {
   const [mongoData, setMongoData] = useState<mongoDataProps[]>()
 
   useEffect(() => {
-    fetch("https://paper-express.herokuapp.com/reliance")
+    if (!process.env.REACT_APP_DATABASE_URL) {
+      throw new Error("REACT_APP_DATABASE_URL is not defined")
+    }
+    fetch(process.env.REACT_APP_DATABASE_URL)
       .then((res) => res.json())
       .then((data) => {
         setMongoData(data)
@@ -32,7 +35,7 @@ const App = () => {
   return (
     <>
       <Navbar />
-      <div className="text-xl mx-4 mt-2 text-white">
+      <div className="md:text-xl mx-4 mt-2 text-white">
         <SelectDate
           dates={mongoData.map((i) => i.date)}
           setselectDate={setselectDate}

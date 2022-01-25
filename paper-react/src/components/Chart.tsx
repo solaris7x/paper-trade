@@ -72,7 +72,7 @@ const Chart = (props: ChartProps) => {
   const off = gradientOffset()
 
   return (
-    <div className="w-1/2 ml-4 pt-2 bg-gray-700">
+    <div className="md:w-1/2 mt-4 md:mt-0 md:ml-4 pt-2 bg-gray-700">
       <div className="font-bold pl-4 pb-2">Chart</div>
       <ResponsiveContainer width="100%" aspect={2}>
         <AreaChart

@@ -16,7 +16,7 @@ const CurrentBar = ({
   return (
     <div className="mt-4 text-center flex justify-between">
       <button
-        className="px-2 py-1 font-bold bg-zinc-700 rounded-md"
+        className="px-2 md:py-1 font-bold bg-zinc-700 rounded-md"
         onClick={() => {
           // Find current date index in mongoData
           const currentDateIndex = mongoData.findIndex((i) => i.date === date)
@@ -51,7 +51,7 @@ const CurrentBar = ({
         <div className="">₹ {price}</div>
       </div>
       <button
-        className="px-2 py-1 font-bold bg-zinc-700 rounded-md"
+        className="px-2 md:py-1 font-bold bg-zinc-700 rounded-md"
         onClick={() => {
           // Find current date index in mongoData
           const currentDateIndex = mongoData.findIndex((i) => i.date === date)
